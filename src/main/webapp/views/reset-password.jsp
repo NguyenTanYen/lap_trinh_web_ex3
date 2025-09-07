@@ -1,37 +1,37 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Register</title>
+    <title>Đặt lại mật khẩu</title>
     <style>
         body {
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            font-family: "Segoe UI", sans-serif;
             background: linear-gradient(135deg, #2980b9, #6dd5fa, #ffffff);
             height: 100vh;
+            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0;
         }
-        .register-container {
+        .reset-container {
             background: #fff;
             padding: 40px 30px;
             border-radius: 15px;
-            box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
-            width: 350px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            width: 380px;
             text-align: center;
         }
-        .register-container h2 {
+        h2 {
             margin-bottom: 25px;
             color: #2c3e50;
         }
         .form-group {
-            margin-bottom: 20px;
             text-align: left;
+            margin-bottom: 18px;
         }
         .form-group label {
-            font-weight: 600;
             display: block;
             margin-bottom: 8px;
+            font-weight: 600;
             color: #34495e;
         }
         .form-group input {
@@ -44,7 +44,7 @@
         .form-group input:focus {
             border-color: #2980b9;
             outline: none;
-            box-shadow: 0px 0px 5px rgba(41,128,185,0.6);
+            box-shadow: 0 0 5px rgba(41,128,185,0.6);
         }
         button {
             background: #2980b9;
@@ -57,9 +57,20 @@
             font-weight: 600;
             cursor: pointer;
             transition: 0.3s;
+            margin-top: 10px;
         }
         button:hover {
             background: #1f6391;
+        }
+        .message {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        .error {
+            color: red;
+        }
+        .success {
+            color: green;
         }
         .links {
             margin-top: 20px;
@@ -69,45 +80,37 @@
             color: #2980b9;
             text-decoration: none;
             font-weight: 500;
-            margin: 0 5px;
         }
         .links a:hover {
             text-decoration: underline;
         }
-        .error {
-            color: red;
-            margin-bottom: 15px;
-            font-size: 14px;
-        }
     </style>
 </head>
 <body>
-<div class="register-container">
-    <h2>Đăng ký tài khoản</h2>
-    <form action="register" method="post">
+<div class="reset-container">
+    <h2>Đặt lại mật khẩu</h2>
+    <form action="reset-password" method="post">
         <div class="form-group">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required/>
-        </div>
-
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required/>
-        </div>
-
-        <div class="form-group">
-            <label for="password">Password:</label>
+            <label for="password">Mật khẩu mới:</label>
             <input type="password" id="password" name="password" required/>
         </div>
 
-        <button type="submit">Đăng ký</button>
-
-        <p class="error">${error}</p>
-
-        <div class="links">
-            <a href="login">Quay lại đăng nhập</a>
+        <div class="form-group">
+            <label for="confirmPassword">Xác nhận mật khẩu:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required/>
         </div>
+
+        <button type="submit">Cập nhật mật khẩu</button>
     </form>
+
+    <div class="message">
+        <p class="error">${error}</p>
+        <p class="success">${message}</p>
+    </div>
+
+    <div class="links">
+        <a href="login">Quay lại đăng nhập</a>
+    </div>
 </div>
 </body>
 </html>

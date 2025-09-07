@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Test@localhost" uuid="b67bca77-0530-4d11-82fe-2af74cabd093">
+    <data-source source="LOCAL" name="Ex_03@localhost" uuid="dc7c47c6-bae6-42a4-b800-2fe3f0a7b3d4">
       <driver-ref>sqlserver.ms</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://localhost:1433;database=Test</jdbc-url>
+      <jdbc-url>jdbc:sqlserver://localhost:1433;database=Ex_03</jdbc-url>
       <jdbc-additional-properties>
         <property name="com.intellij.clouds.kubernetes.db.host.port" />
         <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
