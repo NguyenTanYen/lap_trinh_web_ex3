@@ -1,16 +1,18 @@
 package dto;
 
+import java.math.BigDecimal;
+
 public class BookDTO {
     private int id;
     private int userId;
     private String title;
     private String author;
     private String publisher;
-    private double price;
+    private BigDecimal price; // dùng BigDecimal
 
     public BookDTO() {}
 
-    public BookDTO(int id, int userId, String title, String author, String publisher, double price) {
+    public BookDTO(int id, int userId, String title, String author, String publisher, BigDecimal price) {
         this.id = id;
         this.userId = userId;
         this.title = title;
@@ -19,7 +21,6 @@ public class BookDTO {
         this.price = price;
     }
 
-    // Getters & setters
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
@@ -35,6 +36,6 @@ public class BookDTO {
     public String getPublisher() { return publisher; }
     public void setPublisher(String publisher) { this.publisher = publisher; }
 
-    public double getPrice() { return price; }
-    public void setPrice(double price) { this.price = price; }
+    public BigDecimal getPrice() { return price; }
+    public void setPrice(BigDecimal price) { this.price = price; }
 }
