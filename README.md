@@ -2,7 +2,7 @@
 
 Quản lý **sách** theo quan hệ **1 User – N Book**, bổ sung **Forgot Password** (token) và **Logout**. Triển khai theo mô hình MVC đơn giản: Servlet (Controller) + JSP (View) + DAO/JDBC (Model).
 
-## ✨ Tính năng
+## Tính năng
 - Đăng ký / Đăng nhập (session-based)
 - **Logout**: huỷ session, redirect login
 - **Forgot Password**: phát sinh token, hết hạn 30 phút, reset 1 lần
